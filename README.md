@@ -50,6 +50,12 @@ This network is used to estimate a single corner from a cropped image. In this c
 For further details and illustrations of the different unit of those algorithms, I refer the reader to the attached jupter-notebook.
 
 # Final Results
+We measure our preformance in terms of Dice score for each background.
+## First Algorithm
+![1StBoxPlot](https://user-images.githubusercontent.com/49431639/156584123-91a137b1-1e0e-4142-9fcd-463b4d73e46b.png)
+## Second Algorithm
+![2NDBoxPlot](https://user-images.githubusercontent.com/49431639/156584160-d3982a93-fe4b-41cf-bcd9-42fc10d49565.png)
+
 ## Background 01
 ![2](https://user-images.githubusercontent.com/49431639/156577861-0356024b-f741-4e69-a451-fcc00433ecd2.jpg)
 ## Background 02
