@@ -51,20 +51,21 @@ For further details and illustrations of the different unit of those algorithms,
 
 # Final Results
 We measure our preformance in terms of Dice score for each background.
-## First Algorithm
+## Dice Score Preformance
+### First Algorithm 
 ![1StBoxPlot](https://user-images.githubusercontent.com/49431639/156584123-91a137b1-1e0e-4142-9fcd-463b4d73e46b.png)
-## Second Algorithm
+### Second Algorithm
 ![2NDBoxPlot](https://user-images.githubusercontent.com/49431639/156584160-d3982a93-fe4b-41cf-bcd9-42fc10d49565.png)
-
-## Background 01
+## Second Algorithm Preformance Visualization
+### Background 01
 ![2](https://user-images.githubusercontent.com/49431639/156577861-0356024b-f741-4e69-a451-fcc00433ecd2.jpg)
-## Background 02
+### Background 02
 ![1](https://user-images.githubusercontent.com/49431639/156576860-c4d643a1-74b2-4911-ab91-83f48a0c83d8.jpg)
-## Background 03
+### Background 03
 ![2](https://user-images.githubusercontent.com/49431639/156577952-91b71fcd-a4f8-4251-91c3-c61152f91ec4.jpg)
-## Background 04
+### Background 04
 ![1](https://user-images.githubusercontent.com/49431639/156576982-058884f5-e05c-4130-8b01-d803b67a6c36.jpg)
-## Background 05
+### Background 05
 ![1](https://user-images.githubusercontent.com/49431639/156576999-bf7bbb8c-23cc-4c0e-a59a-a4f748b6b9eb.jpg)
 
 
