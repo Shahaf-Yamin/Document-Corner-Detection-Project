@@ -9,6 +9,10 @@ top left (tl), top right (tr), bottom right (br), and bottom left (bl).
 
 The short videos are taken over 5 different backgrounds, where background 5 is relatively complex as will be shown later.
 Over each background, the videos have been taken over different document types - datasheet, letter, magazine, paper, patent, and tax, (5 short videos per background and document type).
+# Data
+The following google drive contains our trained networks checkpoints combined with the raw ICDAR data, in order to use this code and methods please use the data in the following link:
+https://drive.google.com/drive/folders/1ZyWpjdwCUQZr6ZSNzQs1KpogdQX8atXU?usp=sharing
+
 # Algorithms
 This repository contains an implemenation of 2 different algorithms.
 
