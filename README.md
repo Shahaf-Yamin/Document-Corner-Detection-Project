@@ -33,6 +33,7 @@ The following steps details the algorithm we've developed to extract the 4 corne
 
 ### Corners Estimation Refiner
 We utilized the edged masked image to further improve the corners estimation.
+![Hough](https://user-images.githubusercontent.com/49431639/156583140-7e9a53d3-7f7f-44a3-bdba-7c5f79663251.png)
 
 
 ## Second Solution - 
@@ -40,11 +41,11 @@ We further developed an algorithm that is a combination of techniques from the b
 
 ### Corners Detector Architecture
 This network is used to estimate the 4 corners of the document. For that, we used the output of a UNet as an input to a ResNet20 network. Then, we calculate the Combo Loss over the UNet output and an MSE loss over the ResNet output. We define our network's loss as the summation of these losses. 
-[Uploading Unknown…]()
+![DOCUMENT](https://user-images.githubusercontent.com/49431639/156582980-1dd899ab-9dad-4be8-925c-cc0d9518c1b9.png)
 
 ### Corners Refiner Architecture
 This network is used to estimate a single corner from a cropped image. In this case, the input to the ResNet20 network is a concatenation of the input image  with the UNet output along the channel axis, similarly to the original Corner Detector network. We define the loss function for the network as the same loss of the Corner Detector network. 
-[Uploading Unknown-2…]()
+![corner](https://user-images.githubusercontent.com/49431639/156583032-c8b7c878-e8be-46f8-94e4-39e7fae6900b.png)
 
 For further details and illustrations of the different unit of those algorithms, I refer the reader to the attached jupter-notebook.
 
