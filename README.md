@@ -9,6 +9,44 @@ top left (tl), top right (tr), bottom right (br), and bottom left (bl).
 
 The short videos are taken over 5 different backgrounds, where background 5 is relatively complex as will be shown later.
 Over each background, the videos have been taken over different document types - datasheet, letter, magazine, paper, patent, and tax, (5 short videos per background and document type).
+# Algorithms
+This repository contains an implemenation of 2 different algorithms.
+
+## First Solution - Combination of Hough Transform and Unet
+We can divide this proposed algorithm into 4 main units:
+
+### Preprocess
+1.   Split the data into train, and test
+2.   Resize the images to 512X512
+3.   Normalize the dataset according to the train set mean and standard deviation.
+4.   Apply a Gaussian filter over the images.
+
+### Document Segmentation
+Using the well-known deep learning architecture U-Net to create a binary mask segmentation of the document.
+
+### Extracting Corners
+The following steps details the algorithm we've developed to extract the 4 corners estimation coordinates from the masked image:
+1. Extract edges from the masked image
+2.   Apply Hough transform [2] over the edged masked image and extract some predefined number of peaks.
+3.   Apply a hand-crafted clustering method to find an estimation of the 4 lines constructing the quadrilateral shape of the masked image
+4. Extract corners from the lines equations
+
+### Corners Estimation Refiner
+We utilized the edged masked image to further improve the corners estimation.
+
+
+## Second Solution - 
+We further developed an algorithm that is a combination of techniques from the benchmark and the proposed first solution. In this algorithm, we adapt the main ideas from the benchmark algorithm while we integrate a segmenation unit into the Corners Detector and the Corner Refiner architectures.
+
+### Corners Detector Architecture
+This network is used to estimate the 4 corners of the document. For that, we used the output of a UNet as an input to a ResNet20 network. Then, we calculate the Combo Loss over the UNet output and an MSE loss over the ResNet output. We define our network's loss as the summation of these losses. 
+[Uploading Unknown…]()
+
+### Corners Refiner Architecture
+This network is used to estimate a single corner from a cropped image. In this case, the input to the ResNet20 network is a concatenation of the input image  with the UNet output along the channel axis, similarly to the original Corner Detector network. We define the loss function for the network as the same loss of the Corner Detector network. 
+[Uploading Unknown-2…]()
+
+For further details and illustrations of the different unit of those algorithms, I refer the reader to the attached jupter-notebook.
 
 # Final Results
 ## Background 01
